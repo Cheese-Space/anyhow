@@ -14,8 +14,8 @@ rust-version = "1.68"
 [features]
 default = ["std"]
 std = []
-# Compatibility with the old backtrace optional dependency; allow
-# specifying backtrace as a feature without breaking
+# THIS HAS NO EFFECT. This feature remains to preserve compatibility with the
+# old `backtrace` optional dependency that this crate used to have.
 backtrace = []
 
 [dev-dependencies]
