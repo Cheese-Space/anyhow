@@ -665,11 +665,11 @@ pub enum BacktraceVisibility {
 #[cfg(feature = "std")]
 /// Sets backtrace visibility.
 /// 
-/// See BackTraceVisibility for more info.
+/// See BackTraceVisibility for more info.  
 /// Note: set_backtrace_visibility is not available in no_std.   
 /// 
 /// # example  
-/// ```
+/// ``` no_run
 /// use anyhow::{bail, BacktraceVisibility::*, set_backtrace_visibility};  
 /// fn main() -> anyhow::Result<()> {  
 ///     set_backtrace_visibility(PanicOnly);  
