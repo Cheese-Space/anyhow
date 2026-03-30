@@ -680,16 +680,10 @@ pub fn set_backtrace_visibility(visibility: BacktraceVisibility) {
     use std::env;
     use crate::BacktraceVisibility::*;
     match visibility {
-        PanicAndError => {
-            unsafe {
-                env::set_var("RUST_BACKTRACE", "1");
-            }
-        }
+        PanicAndError => env::set_var("RUST_BACKTRACE", "1"),
         PanicOnly => {
-            unsafe {
-                env::set_var("RUST_BACKTRACE", "1");
-                env::set_var("RUST_LIB_BACKTRACE", "0");
-            }
+            env::set_var("RUST_BACKTRACE", "1");
+            env::set_var("RUST_LIB_BACKTRACE", "0");
         }
     }
 }
